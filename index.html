@@ -1,0 +1,240 @@
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manon</title>
+        <style>
+            body {
+                height: 100vh;
+                background: radial-gradient(
+                    ellipse at center,
+                    rgba(255, 255, 255, 0.7) 0%,
+                    skyblue 100%
+                );
+            }
+
+            #logocontainer {
+                background: transparent;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 650px;
+                height: 650px;
+                position: absolute;
+            }
+
+            #css3 {
+                margin: 0;
+                position: absolute;
+                top: 67%;
+                left: 20%;
+                width: 15%;
+                transform: translate(-50%, -50%);
+                transform-origin: center center;
+            }
+
+            #html5 {
+                margin: 0;
+                position: absolute;
+                top: 37%;
+                left: 30%;
+                width: 15%;
+                transform: translate(-50%, -50%);
+            }
+
+            #sass {
+                margin: 0;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                width: 15%;
+                transform: translate(-50%, -50%);
+            }
+
+            #js {
+                margin: 0;
+                position: absolute;
+                top: 37%;
+                left: 70%;
+                width: 15%;
+                transform: translate(-50%, -50%);
+            }
+
+            #php {
+                margin: 0;
+                position: absolute;
+                top: 67%;
+                left: 80%;
+                width: 15%;
+                transform: translate(-50%, -50%);
+            }
+
+            #Retina1,
+            #Retina2 {
+                animation-name: blink;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                transform-origin: 50%;
+            }
+
+            @keyframes blink {
+                0% {
+                    transform: scaleX(1) scaleY(1);
+                }
+                1% {
+                    transform: scaleX(1.3) scaleY(0.1);
+                }
+                2% {
+                    transform: scaleX(1) scaleY(1);
+                }
+                60% {
+                    transform: scaleX(1) scaleY(1);
+                }
+                61% {
+                    transform: scaleX(1.3) scaleY(0.1);
+                }
+                62% {
+                    transform: scaleX(1) scaleY(1);
+                }
+                100% {
+                    transform: scaleX(1) scaleY(1);
+                }
+            }
+            #sanky {
+                margin: 0;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                width: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -5;
+            }
+
+            #retina {
+                width: 50%;
+                margin: 0;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                width: 50%;
+                z-index: -4;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="logo">
+            <div id="logocontainer">
+                <img
+                    class="topics"
+                    id="css3"
+                    src="https://inf3cti0n95.github.io/img/css3.svg"
+                />
+                <img
+                    class="topics"
+                    id="html5"
+                    src="https://inf3cti0n95.github.io/img/html5.svg"
+                />
+                <img
+                    class="topics"
+                    id="sass"
+                    src="https://inf3cti0n95.github.io/img/sass.svg"
+                />
+                <img
+                    class="topics"
+                    id="js"
+                    src="https://inf3cti0n95.github.io/img/js.svg"
+                />
+                <img
+                    class="topics"
+                    id="php"
+                    src="https://inf3cti0n95.github.io/img/php.svg"
+                />
+                <svg
+                    id="retina"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 500 500"
+                    style="enable-background: new 0 0 500 500"
+                    xml:space="preserve"
+                >
+                    <path
+                        id="Retina2"
+                        class="st9"
+                        d="M222,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
+            c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C224,189.2,223.3,187.5,222,186.3z"
+                    />
+                    <path
+                        id="Retina1"
+                        class="st9"
+                        d="M281.6,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
+            c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C283.5,189.2,282.8,187.5,281.6,186.3z"
+                    />
+                </svg>
+                <img id="sanky" src="https://inf3cti0n95.github.io/img/sanky.svg" />
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script>
+            var tl = new TimelineLite();
+            tl.staggerFrom(
+                ".topics",
+                3,
+                {
+                    css: { transform: "scale(0)", top: "60%", left: "50%" },
+                    ease: Elastic.easeOut,
+                },
+                0.3
+            );
+
+            var js = document.getElementById("js");
+            var sass = document.getElementById("sass");
+            var php = document.getElementById("php");
+            var css3 = document.getElementById("css3");
+            var hmtl5 = document.getElementById("html5");
+            var topics = document.getElementsByClassName("topics");
+
+            js.addEventListener("mouseover", jsretina, false);
+            js.addEventListener("touchstart", jsretina, false);
+            html5.addEventListener("mouseover", html5retina, false);
+            html5.addEventListener("touchstart", html5retina, false);
+            sass.addEventListener("mouseover", sassretina, false);
+            sass.addEventListener("touchstart", sassretina, false);
+            php.addEventListener("mouseover", phpretina, false);
+            php.addEventListener("touchstart", phpretina, false);
+            css3.addEventListener("mouseover", css3retina, false);
+            css3.addEventListener("touchstart", css3retina, false);
+
+            function jsretina(event) {
+                TweenMax.to("#retina", 0.2, { left: "51%", top: "59.5%" });
+            }
+
+            function html5retina(event) {
+                TweenMax.to("#retina", 0.2, { left: "49%", top: "59.5%" });
+            }
+
+            function css3retina(event) {
+                TweenMax.to("#retina", 0.2, { left: "49%", top: "60.5%" });
+            }
+
+            function phpretina(event) {
+                TweenMax.to("#retina", 0.2, { left: "51%", top: "60.5%" });
+            }
+
+            function sassretina(event) {
+                TweenMax.to("#retina", 0.2, { left: "50%", top: "59%" });
+            }
+
+            for (var i = 0; i < topics.length; i++) {
+                topics[i].addEventListener("mouseout", retinaout);
+            }
+            function retinaout(event) {
+                TweenMax.to("#retina", 0.2, { left: "50%", top: "60%" });
+            }
+        </script>
+    </body>
+</html>
